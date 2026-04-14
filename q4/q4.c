@@ -9,7 +9,7 @@ int main() {
 
     while (scanf("%5s %d %d", op, &a, &b) == 3) {
         char libname[64];
-        snprintf(libname, sizeof(libname), "lib%s.so", op);
+        snprintf(libname, sizeof(libname), "./lib%s.so", op);
 
 
         void *handle = dlopen(libname, RTLD_LAZY);
